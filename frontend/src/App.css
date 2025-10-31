@@ -1,0 +1,70 @@
+body {
+  background: linear-gradient(180deg, #052830, #2e4951);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 750px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.connect-btn,
+.coupon-card button {
+  background-color: #facc15;
+  border: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.connect-btn:hover,
+.coupon-card button:hover {
+  background-color: #ffe55e;
+}
+
+.coupon-section {
+  margin-top: 40px;
+}
+
+.coupon-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.coupon-card {
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 20px;
+  border-radius: 12px;
+  width: 200px;
+  transition: transform 0.2s;
+}
+
+.coupon-card:hover {
+  transform: translateY(-5px);
+}
+
+.connected {
+  color: #86efac;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 40px;
+  opacity: 0.7;
+}
