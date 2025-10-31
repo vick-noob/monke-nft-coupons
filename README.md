@@ -1,113 +1,134 @@
 # 🐒 Monke Coupon NFT — Web3 Coupon Platform on Solana
 
-Monke Coupon NFT is a blockchain-based project that turns discount coupons into NFTs!  
-It allows users to mint, own, and redeem digital coupons directly on-chain — secure, verifiable, and borderless.
+Monke Coupon NFT is a blockchain-based project that turns everyday discount coupons into NFTs.  
+It allows users to mint, own, transfer, and redeem digital coupons directly on-chain — making coupons secure, verifiable, and borderless.
 
 ---
 
-## 🚀 Features
-- 🎟️ Mint unique NFT coupons for real-world or digital rewards  
-- 💰 Redeem and transfer coupons transparently on-chain  
-- 🔐 Smart contract security powered by Hardhat and Solidity  
-- 🌍 React frontend for easy interaction with your wallet  
-- ⚙️ Built for Solana hackathon MonkeDAO track
+## 🚀 Problem Statement & Motivation
+
+Traditional coupon systems are centralized, easy to forge, and difficult to verify across borders.  
+Brands lose millions to coupon fraud, and users face issues like expiry confusion, duplication, and non-transferability.  
+
+Monke Coupon NFT solves this by bringing coupons on-chain as NFTs — providing transparency, proof of ownership, and global accessibility.
 
 ---
 
-## 🧱 Smart Contract Details
-- Network: Sepolia Testnet  
-- Contract Address: 0x3A110d57905AC213166c495d7ED3997E4ca631aC  
-- Solidity Version: 0.8.28  
-- Framework: Hardhat  
-- Deployed By: Victory Onyeajunwanne  
+## ⚙️ How It Works
+
+1. Coupon Creation: Businesses create coupon NFTs using smart contracts.  
+2. Minting: Users can mint unique coupons tied to wallet addresses.  
+3. Redemption: Once used, the NFT status changes to “Redeemed” on-chain.  
+4. Transferability: Users can trade or transfer unused coupons on marketplaces.
 
 ---
 
-## 🧩 Project Structure
+## 🧰 Tech Stack
 
-monke-nft-coupons/ │ ├── backend/ │   ├── contracts/        # Solidity smart contracts │   ├── scripts/          # Deployment scripts │   ├── hardhat.config.cjs │   └── .env │ └── frontend/ ├── src/              # React components ├── public/ └── package.json
+| Layer | Technology |
+|-------|-------------|
+| Blockchain | Solana |
+| Smart Contracts | Solidity / Hardhat |
+| Backend | Node.js / Express |
+| Frontend | React.js |
+| Integration | Web3.js / ethers.js |
 
 ---
 
-## ⚙️ How to Run Locally
+## 💻 How to Run Locally
 
-### 🧠 Backend
-`bash
-cd backend
-npm install
-npx hardhat compile
-npx hardhat run scripts/deploy.cjs --network sepolia
+1. Clone the repository:
+   `bash
+   git clone https://github.com/vick-noob/monke-nft-coupons.git
 
-💻 Frontend
+2. Navigate into the folder:
 
-cd frontend
-npm install
+cd monke-nft-coupons
+
+
+3. Install dependencies (for both frontend and backend):
+
+cd backend && npm install
+cd ../frontend && npm install
+
+
+4. Set up environment variables:
+
+Create a .env file inside both frontend and backend directories.
+
+Add your API keys, network URLs, and private keys as needed.
+
+
+
+5. Run the project:
+
 npm start
 
-
----
-
-🎥 Demo Video
-
-Watch Here: YouTube Demo (to be updated soon)
-
-> ⚠️ Note: Due to unexpected power outages during final submission,
-the demo video upload was delayed.
-The video link will be updated here as soon as possible.
-Thank you for understanding. 🙏
+Your app will open on http://localhost:3000
 
 
 
 
 ---
 
-🧠 Technologies Used
+🌐 Demo Video
 
-Solidity (Smart Contracts)
+🎥 Coming soon — will be uploaded once power is restored.
 
-Hardhat Framework
 
-Ethers.js
+---
 
-React.js
+🧩 Features
 
-Node.js
+🪙 Mint NFT coupons for real-world or digital rewards
 
-MetaMask / Sepolia Testnet
+🔁 Redeem and transfer coupons transparently on-chain
+
+⚡️ Smart contract security powered by Hardhat and Solidity
+
+💻 React-based frontend for intuitive user interaction
+
+🌍 Borderless and verifiable coupon ownership
 
 
 
 ---
 
-👨‍💻 Author
+💡 Future Improvements
+
+Integration with major Solana marketplaces
+
+Support for dynamic coupon expiration
+
+Multi-chain coupon interoperability
+
+Business dashboard for analytics
+
+
+
+---
+
+🙏 Note from the Developer
+
+> Unfortunately, a power outage during the final hours of submission prevented me from completing the demo upload on time.
+I sincerely apologize for this delay — the full video will be added shortly once power is restored.
+Thank you for your understanding and for reviewing this project despite the challenge.
+
+
+
+
+---
+
+🧑‍💻 Author
 
 Victory Onyeajunwanne
-
-💼 GitHub Profile
-
-✉️ paynode633@gmail.com
-
+GitHub Profile
 
 
 ---
 
-🏁 Future Improvements
+🐒 MonkeDAO Hackathon Submission
 
-Add NFT coupon marketplace
-
-Enable coupon expiration and tiered rewards
-
-Build wallet-based authentication
-
-Improve contract verification automation
-
-
-
----
-
-❤️ Acknowledgment
-
-Special thanks to MonkeDAO and the Superteam x Cypherpunk Hackathon
-for the opportunity to showcase this idea!
+Built with love, dedication, and Web3 spirit ❤️
 
 ---
