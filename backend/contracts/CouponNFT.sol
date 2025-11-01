@@ -13,7 +13,6 @@ contract CouponNFT is ERC721URIStorage, Ownable {
 
     function createCouponNFT(address recipient, string memory tokenURI)
         public
-        onlyOwner
         returns (uint256)
     {
         uint256 newItemId = tokenCounter;
@@ -22,4 +21,4 @@ contract CouponNFT is ERC721URIStorage, Ownable {
         tokenCounter++;
         return newItemId;
     }
-}
+} 

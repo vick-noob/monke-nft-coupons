@@ -1,0 +1,18 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/CouponNFT.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.20;\n\nimport \"@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol\";\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\n\ncontract CouponNFT is ERC721URIStorage, Ownable {\n    uint256 public tokenCounter;\n\n    constructor() ERC721(\"MonkeCouponNFT\", \"MCN\") Ownable(msg.sender) {\n        tokenCounter = 0;\n    }\n\n    function createCouponNFT(address recipient, string memory tokenURI)\n        public\n        onlyOwner\n        returns (uint256)\n    {\n        uint256 newItemId = tokenCounter;\n        _safeMint(recipient, newItemId);\n        _setTokenURI(newItemId, tokenURI);\n        tokenCounter++;\n        return newItemId;\n    }\n}"
+    },
+    "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\nimport \"../ERC721.sol\";\nimport \"../../utils/Strings.sol\";\nimport \"../../utils/introspection/ERC165.sol\";\nimport \"../../utils/Context.sol\";\nimport \"../../utils/Address.sol\";\nimport \"../../interfaces/IERC721Metadata.sol\";\n\nabstract contract ERC721URIStorage is ERC721 {\n    mapping(uint256 => string) private _tokenURIs;\n\n    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {\n        _requireMinted(tokenId);\n        string memory _tokenURI = _tokenURIs[tokenId];\n        string memory base = _baseURI();\n        if (bytes(base).length == 0) {\n            return _tokenURI;\n        }\n        if (bytes(_tokenURI).length > 0) {\n            return string(abi.encodePacked(base, _tokenURI));\n        }\n        return super.tokenURI(tokenId);\n    }\n\n    function _setTokenURI(uint256 tokenId, string memory _tokenURI) internal virtual {\n        require(_exists(tokenId), \"ERC721URIStorage: URI set of nonexistent token\");\n        _tokenURIs[tokenId] = _tokenURI;\n    }\n\n    function _burn(uint256 tokenId) internal virtual override {\n        super._burn(tokenId);\n        if (bytes(_tokenURIs[tokenId]).length != 0) {\n            delete _tokenURIs[tokenId];\n        }\n    }\n}"
+    },
+    "@openzeppelin/contracts/access/Ownable.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\nimport \"../utils/Context.sol\";\n\nabstract contract Ownable is Context {\n    address private _owner;\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\n\n    constructor(address initialOwner) {\n        require(initialOwner != address(0), \"Owner cannot be zero address\");\n        _owner = initialOwner;\n        emit OwnershipTransferred(address(0), initialOwner);\n    }\n\n    modifier onlyOwner() {\n        require(owner() == _msgSender(), \"Ownable: caller is not the owner\");\n        _;\n    }\n\n    function owner() public view virtual returns (address) {\n        return _owner;\n    }\n\n    function transferOwnership(address newOwner) public virtual onlyOwner {\n        require(newOwner != address(0), \"Ownable: new owner is the zero address\");\n        emit OwnershipTransferred(_owner, newOwner);\n        _owner = newOwner;\n    }\n}"
+    }
+  },
+  "settings": {
+    "optimizer": { "enabled": true, "runs": 200 },
+    "outputSelection": { "*": { "*": ["*"] } }
+  }
+}
