@@ -73,7 +73,20 @@ Your app will open on http://localhost:3000
 
 🌐 Demo Video
 
-🎥 Coming soon — will be uploaded once power is restored.
+🎥 Project Demo
+
+Watch the Monke NFT Coupons demo video below 👇
+🎬 https://drive.google.com/file/d/1RAylhXmttM7QSaTGpyG38TLRDruXkiBO/view?usp=drivesdk
+Video Highlights:
+
+Wallet connection using MetaMask
+
+Individual NFT coupon minting (Hoodie, Banana Club, and VIP Ticket)
+
+Successful on-chain transaction
+
+UI interactions and confirmation flow
+
 
 
 ---
@@ -110,9 +123,14 @@ Business dashboard for analytics
 
 🙏 Note from the Developer
 
-> Unfortunately, a power outage during the final hours of submission prevented me from completing the demo upload on time.
-I sincerely apologize for this delay — the full video will be added shortly once power is restored.
-Thank you for your understanding and for reviewing this project despite the challenge.
+> Hey judges 👋,
+
+I noticed there was a bit of background noise and the MetaMask confirmation popup wasn’t visible in the current demo video. I sincerely apologize for that.
+
+I’ll be uploading a clearer and more detailed version of the demo video soon, showing the full minting process and wallet confirmation.
+
+Thank you for your understanding — and for taking the time to review my project ❤️
+
 
 
 
