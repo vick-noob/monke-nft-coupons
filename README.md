@@ -87,11 +87,11 @@ npm start
 
 💡 Features
 
-✅ Connect wallet using MetaMask
-✅ Mint individual NFT coupons — each with unique metadata
-✅ Interact with deployed CouponNFT smart contract
-✅ Fully compatible with Ethereum Sepolia testnet
-✅ Clean and minimal user interface
+✅ Connect wallet using MetaMask.
+✅ Mint individual NFT coupons — each with unique metadata.
+✅ Interact with deployed CouponNFT smart contract.
+✅ Fully compatible with Ethereum Sepolia testnet.
+✅ Clean and minimal user interface.
 
 
 ---
