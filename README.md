@@ -1,152 +1,171 @@
-# 🐒 Monke Coupon NFT — Web3 Coupon Platform on Solana
 
-Monke Coupon NFT is a blockchain-based project that turns everyday discount coupons into NFTs.  
-It allows users to mint, own, transfer, and redeem digital coupons directly on-chain — making coupons secure, verifiable, and borderless.
+# 🦧 Monke NFT Coupons  
 
----
-
-## 🚀 Problem Statement & Motivation
-
-Traditional coupon systems are centralized, easy to forge, and difficult to verify across borders.  
-Brands lose millions to coupon fraud, and users face issues like expiry confusion, duplication, and non-transferability.  
-
-Monke Coupon NFT solves this by bringing coupons on-chain as NFTs — providing transparency, proof of ownership, and global accessibility.
+Redeem exclusive NFT-based coupons and access rewards from the **MonkeDAO community** — including merch discounts, event passes, and private club perks.  
+Built for the **Cypherpunk Hackathon** and powered by **Solidity, Hardhat, and React**.  
 
 ---
 
-## ⚙️ How It Works
+## 🎥 Demo Video  
+📽️ Watch the project demo here:  
+👉 [Google Drive Video Link](https://drive.google.com/file/d/1RAylhXmttM7QSaTGpyG38TLRDruXkiBO/view?usp=drivesdk)  
 
-1. Coupon Creation: Businesses create coupon NFTs using smart contracts.  
-2. Minting: Users can mint unique coupons tied to wallet addresses.  
-3. Redemption: Once used, the NFT status changes to “Redeemed” on-chain.  
-4. Transferability: Users can trade or transfer unused coupons on marketplaces.
-
----
-
-## 🧰 Tech Stack
-
-| Layer | Technology |
-|-------|-------------|
-| Blockchain | Solana |
-| Smart Contracts | Solidity / Hardhat |
-| Backend | Node.js / Express |
-| Frontend | React.js |
-| Integration | Web3.js / ethers.js |
+> ⚠️ A clearer and updated demo will be uploaded soon. This video demonstrates the core functionality, wallet connection, and NFT minting flow.  
 
 ---
 
-## 💻 How to Run Locally
+## 🌍 Project Overview  
+Each coupon NFT represents a unique reward:
+- 🦍 **Jungle Hoodie** – 20% OFF official Monke merch  
+- 🍌 **Banana Club** – Access to private Discord lounge  
+- 🎫 **VIP Event Ticket** – Free entry to the next Monke meetup  
 
-1. Clone the repository:
-   `bash
+Each NFT is minted separately, ensuring users can claim each reward independently.
+
+---
+
+## 🧠 Tech Stack  
+- **Frontend:** React + Ethers.js + Web3Modal  
+- **Smart Contract:** Solidity + Hardhat  
+- **Network:** Ethereum Sepolia Testnet  
+- **Storage:** IPFS via Pinata  
+
+---
+
+## 🛠 Installation & Setup  
+
+1. **Clone this repository:**
+   ```bash
    git clone https://github.com/vick-noob/monke-nft-coupons.git
 
-2. Navigate into the folder:
+2. Navigate into the project:
 
 cd monke-nft-coupons
 
 
-3. Install dependencies (for both frontend and backend):
+3. Install dependencies:
 
-cd backend && npm install
-cd ../frontend && npm install
-
-
-4. Set up environment variables:
-
-Create a .env file inside both frontend and backend directories.
-
-Add your API keys, network URLs, and private keys as needed.
+npm install
 
 
 
-5. Run the project:
 
+---
+
+⚙️ Compatibility Note
+
+> Important: If you encounter dependency or Hardhat version errors while setting up the project, please use Node.js v20 or lower and run:
+
+npm install --legacy-peer-deps
+
+This ensures all packages install smoothly and the project compiles correctly.
+
+
+
+
+---
+
+4. Compile the smart contracts:
+
+npx hardhat compile
+
+
+5. Deploy to Sepolia Testnet:
+
+npx hardhat run scripts/deploy.cjs --network sepolia
+
+
+6. Run the frontend app:
+
+cd frontend
 npm start
 
-Your app will open on http://localhost:3000
-
-
-
-
----
-
-🌐 Demo Video
-
-🎥 Project Demo
-
-Watch the Monke NFT Coupons demo video below 👇
-🎬 https://drive.google.com/file/d/1RAylhXmttM7QSaTGpyG38TLRDruXkiBO/view?usp=drivesdk
-Video Highlights:
-
-Wallet connection using MetaMask
-
-Individual NFT coupon minting (Hoodie, Banana Club, and VIP Ticket)
-
-Successful on-chain transaction
-
-UI interactions and confirmation flow
 
 
 
 ---
 
-🧩 Features
+💡 Features
 
-🪙 Mint NFT coupons for real-world or digital rewards
+✅ Connect wallet using MetaMask
+✅ Mint individual NFT coupons — each with unique metadata
+✅ Interact with deployed CouponNFT smart contract
+✅ Fully compatible with Ethereum Sepolia testnet
+✅ Clean and minimal user interface
 
-🔁 Redeem and transfer coupons transparently on-chain
 
-⚡️ Smart contract security powered by Hardhat and Solidity
+---
 
-💻 React-based frontend for intuitive user interaction
+🧱 Smart Contract
 
-🌍 Borderless and verifiable coupon ownership
+Contract Name: CouponNFT
+Deployed Address (Sepolia): 0xA3B245cf301DF92058fa811cE9E10156C087117C
+Language: Solidity ^0.8.20
+Framework: Hardhat
+
+
+---
+
+🧩 Troubleshooting
+
+🚫 MetaMask not connecting
+
+Make sure the Sepolia Test Network is enabled in your MetaMask.
+
+If not visible, click your network dropdown → “Show Test Networks” → enable “Sepolia”.
+
+
+⚡ Minting fails with “Execution prevented because the circuit breaker is open”
+
+This is caused by temporary RPC rate limits on Sepolia.
+
+Fix:
+
+1. Disconnect MetaMask and reconnect.
+
+
+2. Try again after a minute or two.
+
+
+3. Make sure your Infura RPC key in .env is valid.
+
+
+
+
+🧰 Compilation or Hardhat version errors
+
+Use:
+
+npm install --legacy-peer-deps
+
+Or downgrade Node.js to v20.x or v18.x for full compatibility.
+
+
+🦊 No MetaMask popup during mint
+
+Check if your browser blocks pop-ups or extensions.
+
+Close and reopen your MetaMask extension.
+
+Make sure you have test ETH on Sepolia to pay for gas.
 
 
 
 ---
 
-💡 Future Improvements
-
-Integration with major Solana marketplaces
-
-Support for dynamic coupon expiration
-
-Multi-chain coupon interoperability
-
-Business dashboard for analytics
-
-
-
----
-
-🙏 Note from the Developer
-
-> Hey judges 👋,
-
-I noticed there was a bit of background noise and the MetaMask confirmation popup wasn’t visible in the current demo video. I sincerely apologize for that.
-
-I’ll be uploading a clearer and more detailed version of the demo video soon, showing the full minting process and wallet confirmation.
-
-Thank you for your understanding — and for taking the time to review my project ❤️
-
-
-
-
-
----
-
-🧑‍💻 Author
+👨🏽‍💻 Author
 
 Victory Onyeajunwanne
-GitHub Profile
+Frontend Engineer & Smart Contract Developer
+
+💬 "Built with 💛 for the MonkeDAO community — and the web3 future."
 
 
 ---
 
-🐒 MonkeDAO Hackathon Submission
+📜 License
 
-Built with love, dedication, and Web3 spirit ❤️
+This project is licensed under the MIT License.
+
 
 ---
