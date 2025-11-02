@@ -1,171 +1,133 @@
+# 🦧 Monke NFT Coupons
 
-# 🦧 Monke NFT Coupons  
-
-Redeem exclusive NFT-based coupons and access rewards from the **MonkeDAO community** — including merch discounts, event passes, and private club perks.  
-Built for the **Cypherpunk Hackathon** and powered by **Solidity, Hardhat, and React**.  
-
----
-
-## 🎥 Demo Video  
-📽️ Watch the project demo here:  
-👉 [Google Drive Video Link](https://drive.google.com/file/d/1RAylhXmttM7QSaTGpyG38TLRDruXkiBO/view?usp=drivesdk)  
-
-> ⚠️ A clearer and updated demo will be uploaded soon. This video demonstrates the core functionality, wallet connection, and NFT minting flow.  
+MonkeDAO presents **Monke NFT Coupons** — a Web3-powered discount and access pass system for the Monke community.  
+Users can mint unique NFT coupons that unlock real-world and digital rewards like merch discounts, private Discord access, and VIP event tickets.
 
 ---
 
-## 🌍 Project Overview  
-Each coupon NFT represents a unique reward:
-- 🦍 **Jungle Hoodie** – 20% OFF official Monke merch  
-- 🍌 **Banana Club** – Access to private Discord lounge  
-- 🎫 **VIP Event Ticket** – Free entry to the next Monke meetup  
+## 🚀 Project Overview
 
-Each NFT is minted separately, ensuring users can claim each reward independently.
+This project demonstrates a decentralized reward mechanism powered by **smart contracts on the Sepolia testnet**.  
+Each NFT coupon is minted directly to a connected wallet and can be verified on-chain.
 
 ---
 
-## 🧠 Tech Stack  
-- **Frontend:** React + Ethers.js + Web3Modal  
-- **Smart Contract:** Solidity + Hardhat  
-- **Network:** Ethereum Sepolia Testnet  
-- **Storage:** IPFS via Pinata  
+## 🧱 Smart Contract
+
+- **Network:** Sepolia Testnet  
+- **Contract Address:** `0xA3B245cf301DF92058fa811cE9E10156C087117C`  
+- **Standard:** ERC-721 (NFT)  
+- **Framework:** Hardhat + Ethers.js  
+- **Deployed by:** Victory Onyeajunwanne  
+
+You can verify the deployed contract on Etherscan using your Sepolia account.
 
 ---
 
-## 🛠 Installation & Setup  
+### 🔒 Developer Notes  
 
-1. **Clone this repository:**
-   ```bash
-   git clone https://github.com/vick-noob/monke-nft-coupons.git
+> 🧠 **Important:**  
+> You don’t need to redeploy the contract — it’s already live on the Sepolia network at the address shown above.  
+> The frontend automatically connects to that deployed instance.  
+>
+> If you choose to redeploy for testing, a new contract address will be created (this is normal).  
+> In that case, simply update the address in `App.js` and use **your own Infura API key** in a `.env` file:
+>
+> ```
+> SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_KEY
+> PRIVATE_KEY=your_wallet_private_key
+> ```
+>
+> The `.env` file is intentionally **ignored in GitHub** for security reasons.
 
-2. Navigate into the project:
+---
 
+## 🧩 Features
+
+- 🔗 **Wallet connection** via MetaMask  
+- 🎟 **NFT coupon minting** (unique metadata for each offer)  
+- 🍌 3 distinct NFTs:
+  - Jungle Hoodie (20% merch discount)  
+  - Banana Club (Discord access)  
+  - VIP Event Ticket (free entry to events)
+- 🪙 Built on **Ethers.js + React**
+- 🔐 Fully on-chain NFT proof of ownership
+
+---
+
+## 🖥️ Frontend Tech Stack
+
+| Tech | Description |
+|------|--------------|
+| **React.js** | Frontend framework |
+| **Ethers.js** | Blockchain interactions |
+| **Web3Modal** | Wallet connection |
+| **Hardhat** | Smart contract framework |
+| **Solidity 0.8.28** | Contract language |
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/vick-noob/monke-nft-coupons.git
 cd monke-nft-coupons
 
+2️⃣ Install Dependencies
 
-3. Install dependencies:
+cd backend && npm install
+cd ../frontend && npm install
 
-npm install
+3️⃣ Configure Environment Variables
 
+Create a .env file inside the backend folder with your Infura RPC and wallet private key:
 
+SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_KEY
+PRIVATE_KEY=your_wallet_private_key
 
+4️⃣ (Optional) Deploy the Contract
 
----
-
-⚙️ Compatibility Note
-
-> Important: If you encounter dependency or Hardhat version errors while setting up the project, please use Node.js v20 or lower and run:
-
-npm install --legacy-peer-deps
-
-This ensures all packages install smoothly and the project compiles correctly.
-
+> Only needed if you want to test a new deployment.
+A live contract is already deployed and ready to use.
 
 
-
----
-
-4. Compile the smart contracts:
-
-npx hardhat compile
-
-
-5. Deploy to Sepolia Testnet:
 
 npx hardhat run scripts/deploy.cjs --network sepolia
 
-
-6. Run the frontend app:
+5️⃣ Run the Frontend
 
 cd frontend
 npm start
 
+Then open http://localhost:3000 in your browser.
+
+
+---
+
+🎥 Demo Video
+
+👉 Watch the current demo here:https://drive.google.com/file/d/1RAylhXmttM7QSaTGpyG38TLRDruXkiBO/view?usp=drivesdk
+
+> 🎬 A clearer updated video will be uploaded soon — this version shows the functional minting process (made before the latest UI fixes).
+
 
 
 
 ---
 
-💡 Features
-
-✅ Connect wallet using MetaMask.
-✅ Mint individual NFT coupons — each with unique metadata.
-✅ Interact with deployed CouponNFT smart contract.
-✅ Fully compatible with Ethereum Sepolia testnet.
-✅ Clean and minimal user interface.
-
-
----
-
-🧱 Smart Contract
-
-Contract Name: CouponNFT
-Deployed Address (Sepolia): 0xA3B245cf301DF92058fa811cE9E10156C087117C
-Language: Solidity ^0.8.20
-Framework: Hardhat
-
-
----
-
-🧩 Troubleshooting
-
-🚫 MetaMask not connecting
-
-Make sure the Sepolia Test Network is enabled in your MetaMask.
-
-If not visible, click your network dropdown → “Show Test Networks” → enable “Sepolia”.
-
-
-⚡ Minting fails with “Execution prevented because the circuit breaker is open”
-
-This is caused by temporary RPC rate limits on Sepolia.
-
-Fix:
-
-1. Disconnect MetaMask and reconnect.
-
-
-2. Try again after a minute or two.
-
-
-3. Make sure your Infura RPC key in .env is valid.
-
-
-
-
-🧰 Compilation or Hardhat version errors
-
-Use:
-
-npm install --legacy-peer-deps
-
-Or downgrade Node.js to v20.x or v18.x for full compatibility.
-
-
-🦊 No MetaMask popup during mint
-
-Check if your browser blocks pop-ups or extensions.
-
-Close and reopen your MetaMask extension.
-
-Make sure you have test ETH on Sepolia to pay for gas.
-
-
-
----
-
-👨🏽‍💻 Author
+🧑‍💻 Author
 
 Victory Onyeajunwanne
-Frontend Engineer & Smart Contract Developer
-
-💬 "Built with 💛 for the MonkeDAO community — and the web3 future."
+Frontend Engineer & Web3 Enthusiast
+Built with 💛 during the Cypherpunk Hackathon — MonkeDAO track.
 
 
 ---
 
-📜 License
+🪶 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License — feel free to build on it or expand it for community NFT integrations.
 
 
 ---
