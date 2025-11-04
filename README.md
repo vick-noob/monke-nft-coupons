@@ -1,133 +1,195 @@
-# 🦧 Monke NFT Coupons
+---
 
-MonkeDAO presents **Monke NFT Coupons** — a Web3-powered discount and access pass system for the Monke community.  
-Users can mint unique NFT coupons that unlock real-world and digital rewards like merch discounts, private Discord access, and VIP event tickets.
+# 🐵 MonkeNFT Coupons  
+**Redeem exclusive Monke community rewards — from merch discounts to event passes, powered by NFTs.**  
+
+![Project Banner](https://user-images.githubusercontent.com/placeholder/banner.png)
 
 ---
 
-## 🚀 Project Overview
+## 🚀 Overview  
 
-This project demonstrates a decentralized reward mechanism powered by **smart contracts on the Sepolia testnet**.  
-Each NFT coupon is minted directly to a connected wallet and can be verified on-chain.
+**MonkeNFT Coupons** is a futuristic Web3 dApp designed for the MonkeDAO community.  
+It allows users to **mint NFTs as coupons** that represent exclusive benefits such as:  
+- 🎽 *Discounts on official Monke merchandise*  
+- 🍌 *Access to the private Discord “Banana Club” lounge*  
+- 🎟️ *Free VIP event tickets for upcoming Monke meetups*  
 
----
-
-## 🧱 Smart Contract
-
-- **Network:** Sepolia Testnet  
-- **Contract Address:** `0xA3B245cf301DF92058fa811cE9E10156C087117C`  
-- **Standard:** ERC-721 (NFT)  
-- **Framework:** Hardhat + Ethers.js  
-- **Deployed by:** Victory Onyeajunwanne  
-
-You can verify the deployed contract on Etherscan using your Sepolia account.
+Instead of traditional promo codes or centralized coupon systems, MonkeNFT Coupons uses **blockchain-based NFTs** to ensure transparency, authenticity, and community ownership.  
 
 ---
 
-### 🔒 Developer Notes  
+## 🧠 Core Idea  
 
-> 🧠 **Important:**  
-> You don’t need to redeploy the contract — it’s already live on the Sepolia network at the address shown above.  
-> The frontend automatically connects to that deployed instance.  
->
-> If you choose to redeploy for testing, a new contract address will be created (this is normal).  
-> In that case, simply update the address in `App.js` and use **your own Infura API key** in a `.env` file:
->
-> ```
-> SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_KEY
-> PRIVATE_KEY=your_wallet_private_key
-> ```
->
-> The `.env` file is intentionally **ignored in GitHub** for security reasons.
+> Traditional coupons can be duplicated, reused, or expire without clear tracking.  
+> MonkeNFT Coupons solves this by turning each coupon into a verifiable NFT on the blockchain.  
+
+Each NFT coupon:  
+- is **unique and tamper-proof**  
+- can have an **expiry date**  
+- is **owned by the user’s wallet**, not a centralized server  
+
+Built with ❤️ by **Victory**, this project showcases how NFTs can move beyond collectibles and become **utility assets** that drive real-world engagement.  
 
 ---
 
-## 🧩 Features
+## 🛠️ Tech Stack  
 
-- 🔗 **Wallet connection** via MetaMask  
-- 🎟 **NFT coupon minting** (unique metadata for each offer)  
-- 🍌 3 distinct NFTs:
-  - Jungle Hoodie (20% merch discount)  
-  - Banana Club (Discord access)  
-  - VIP Event Ticket (free entry to events)
-- 🪙 Built on **Ethers.js + React**
-- 🔐 Fully on-chain NFT proof of ownership
-
----
-
-## 🖥️ Frontend Tech Stack
-
-| Tech | Description |
-|------|--------------|
-| **React.js** | Frontend framework |
-| **Ethers.js** | Blockchain interactions |
-| **Web3Modal** | Wallet connection |
-| **Hardhat** | Smart contract framework |
-| **Solidity 0.8.28** | Contract language |
+| Layer | Technology Used |
+|-------|------------------|
+| **Smart Contract** | Solidity |
+| **Testing & Deployment** | Hardhat |
+| **Frontend** | React.js |
+| **Blockchain Network** | Sepolia Testnet |
+| **Wallet Integration** | MetaMask |
+| **Provider** | Infura |
+| **Version Control** | Git & GitHub |
 
 ---
 
-## ⚙️ Setup Instructions
+## 📦 Folder Structure
 
-### 1️⃣ Clone the Repository
+monke-nft-coupons/ ├── backend/                 # Smart contracts + Hardhat setup │   ├── contracts/ │   │   └── MonkeCoupon.sol │   ├── scripts/ │   └── hardhat.config.js │ ├── frontend/                # React frontend for the dApp │   ├── src/ │   │   ├── App.js │   │   ├── App.css │   │   ├── components/ │   │   └── utils/ │   └── package.json │ └── README.md                # You’re here
+
+---
+
+## ⚙️ Installation & Setup  
+
+### 🧩 1. Clone the repository  
 ```bash
 git clone https://github.com/vick-noob/monke-nft-coupons.git
 cd monke-nft-coupons
 
-2️⃣ Install Dependencies
 
-cd backend && npm install
-cd ../frontend && npm install
+---
 
-3️⃣ Configure Environment Variables
+💻 2. Install dependencies
 
-Create a .env file inside the backend folder with your Infura RPC and wallet private key:
+Backend (Hardhat)
 
-SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_KEY
+cd backend
+npm install
+
+Frontend (React)
+
+cd ../frontend
+npm install
+
+
+---
+
+🧱 3. Compile & Deploy the Smart Contract
+
+Make sure your .env file in the backend folder contains:
+
 PRIVATE_KEY=your_wallet_private_key
+INFURA_API_KEY=your_infura_api_key
 
-4️⃣ (Optional) Deploy the Contract
+Then run:
 
-> Only needed if you want to test a new deployment.
-A live contract is already deployed and ready to use.
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network sepolia
+
+After successful deployment, copy your contract address and update it in: frontend/src/utils/contractABI.js
 
 
+---
 
-npx hardhat run scripts/deploy.cjs --network sepolia
-
-5️⃣ Run the Frontend
+🌐 4. Run the Frontend
 
 cd frontend
 npm start
 
-Then open http://localhost:3000 in your browser.
+The app will open at:
+👉 http://localhost:3000
+
+
+---
+
+💡 Features
+
+✅ Mint NFT Coupons: Each NFT represents a discount or reward.
+✅ Wallet Connection: Seamless MetaMask integration.
+✅ Expiry Tracking: Coupons expire after a certain duration.
+✅ Dropdown Menu: Access to Minted NFTs, Coupon Expiry, and About sections.
+✅ Futuristic UI: Neon-glow theme inspired by MonkeDAO’s aesthetic.
+✅ Fully Functional Frontend & Backend Integration.
 
 
 ---
 
 🎥 Demo Video
 
-👉 Watch the current demo here:https://drive.google.com/file/d/1RAylhXmttM7QSaTGpyG38TLRDruXkiBO/view?usp=drivesdk
+Watch the full demo here:
+🎬 https://drive.google.com/file/d/1OA8ZnIPGdvCu5iqBYGJFj7SWQ_E5ALan/view?usp=drivesdk
 
-> 🎬 A clearer updated video will be uploaded soon — this version shows the functional minting process (made before the latest UI fixes).
+
+---
+
+🧩 Challenges Faced
+
+1. MetaMask Slow Response:
+During testing, MetaMask sometimes lagged or froze due to local network caching.
+This was fixed by clearing site data and resetting the account.
+
+
+2. Frontend Alignment Issues:
+UI alignment was lost after style changes; rebuilt with consistent grid and background layers.
+
+
+3. Background Integration:
+Creating the glowing, futuristic background without motion lag required CSS gradient blending and fine-tuning.
+
+
+4. Push Conflicts on GitHub:
+Solved after learning proper use of git pull --rebase and committing staged changes correctly.
+
+
+5. OBS Screen Recording Setup:
+Configuring OBS to record both screen and voice smoothly for the demo took several attempts.
 
 
 
 
 ---
 
-🧑‍💻 Author
+🚧 Future Improvements
 
-Victory Onyeajunwanne
-Frontend Engineer & Web3 Enthusiast
-Built with 💛 during the Cypherpunk Hackathon — MonkeDAO track.
+✨ Add dynamic NFT expiration countdowns on each coupon card.
+✨ Display redeemed NFTs with metadata (image + description).
+✨ Add backend validation to prevent duplicate minting.
+✨ Implement on-chain coupon redemption via QR code scanning.
+✨ Enhance mobile UI responsiveness.
 
 
 ---
 
-🪶 License
+🏁 Conclusion
 
-This project is licensed under the MIT License — feel free to build on it or expand it for community NFT integrations.
+MonkeNFT Coupons demonstrates how Web3 technology can make community rewards transparent and verifiable through NFTs.
+It combines simplicity, design, and decentralization — all built with hard work, passion, and consistency.
+
+> “Built with 💛 by Victory — for the MonkeDAO community and the Web3 future.”
+
+
+
+
+---
+
+🧾 Commands Summary
+
+For quick reference:
+
+# Backend
+cd backend
+npm install
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network sepolia
+
+# Frontend
+cd ../frontend
+npm install
+npm start
 
 
 ---
