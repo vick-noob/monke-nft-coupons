@@ -1,21 +1,23 @@
+---<h1 align="center">🐵 MonkeNFT Coupons</h1>
+
+<p align="center">
+Redeem exclusive <strong>Monke community rewards</strong> — from merch discounts to event passes, powered by NFTs.  
+</p>
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/placeholder/banner.png" alt="Project Banner" width="80%" />
+</p>
+
 ---
 
-# 🐵 MonkeNFT Coupons  
-**Redeem exclusive Monke community rewards — from merch discounts to event passes, powered by NFTs.**  
-
-![Project Banner](https://user-images.githubusercontent.com/placeholder/banner.png)
-
----
-
-## 🚀 Overview  
-
+## 🚀 Overview
 **MonkeNFT Coupons** is a futuristic Web3 dApp designed for the MonkeDAO community.  
 It allows users to **mint NFTs as coupons** that represent exclusive benefits such as:  
 - 🎽 *Discounts on official Monke merchandise*  
 - 🍌 *Access to the private Discord “Banana Club” lounge*  
 - 🎟️ *Free VIP event tickets for upcoming Monke meetups*  
 
-Instead of traditional promo codes or centralized coupon systems, MonkeNFT Coupons uses **blockchain-based NFTs** to ensure transparency, authenticity, and community ownership.  
+Instead of traditional promo codes or centralized coupon systems, MonkeNFT Coupons uses **blockchain-based NFTs** to ensure transparency, authenticity, and community ownership..  
 
 ---
 
