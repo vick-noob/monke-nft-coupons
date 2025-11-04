@@ -4,10 +4,6 @@
 Redeem exclusive <strong>Monke community rewards</strong> — from merch discounts to event passes, powered by NFTs.  
 </p>
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/placeholder/banner.png" alt="Project Banner" width="80%" />
-</p>
-
 ---
 
 ## 🚀 Overview
